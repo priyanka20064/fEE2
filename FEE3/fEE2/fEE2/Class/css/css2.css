@@ -1,0 +1,31 @@
+/* universal selector*/
+*{
+    font-family: 'Franklin Gothic Medium';
+    font-size: 20px;
+}
+/*2) id selector */
+#fruits{
+    color: red;
+    border: 2px dotted green;
+
+}
+/* 3)class seletor*/
+.a1{
+    color: blue;
+    border: 2px  green;
+    text-decoration: none;
+}
+ /* 4) element*/
+ p{
+    background-color: aqua;
+ }
+ /*5) attribute*/
+ input[type="text"]{
+    background-color: aqua;
+ }
+ [type="password"]{
+    background-color: blue;
+ }
+ [placeholder]{
+    background-color: hotpink;
+ }
