@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      
+      referrerpolicy="no-referrer"
+    />
+    <title>Chitkara University</title>
+   <style>*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    width: 100vw;
+  }
+  .pg{
+    background-image:url(admis1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+  }
+  .pg header{
+    height: 55px;
+    background-color: #383F3E;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+  }
+  .pg .content{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-top: 15%;
+    color: #fff;
+  }
+  .pg .content p{
+    padding: 0 25px;
+    font-weight: 600;
+    font-size :xx-large;
+  }
+  .pg .content h1{
+    
+    font-size: 100px;
+  }
+  .pg header a{
+    color: #fff;
+    text-decoration: none;
+    font-size: larger;
+  }
+  .body{
+    background-color:#1ABC9C ;
+    padding: 0px 18px 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 500px rgba(255,255,255,0);
+  }
+  .top{
+    padding: 15px 18px;
+    background-color: #16A185;  
+  }
+  .top p{
+    padding-top: 5px;
+  }
+  .main{
+    background-color: #fff;
+    width: 50%;
+    left: 25%;
+    margin-top:35px;
+    height: auto;
+  }
+  .name {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+  }
+  .name p{
+    margin: 15px ;
+  }
+  .name span{
+    margin:  0 15px 15px;
+  }
+  .name input{
+    width: 150px;
+    margin:  0 15px 15px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size :15px;
+  }
+  .name select{
+    margin:  0 15px 15px;
+    width: 150px;
+    padding: 10px;
+    border: solid 2px;
+    border-radius: 8px;
+    font-size :15px;
+    color: grey;
+  }
+  .submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .submit input{
+    width: 200px;
+    background-color: #16A185;
+    margin-bottom:15px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size :15px;
+  }
+  .submit input:hover{
+    background-color: #1ABC9C;
+  }
+  .foot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#CBD3D2;
+    font-size: small;
+    padding: 8px;
+  }</style>
+  </head>
+  <body>
+    <div class="pg">
+      <header>
+        <a href="#" style="text-decoration:underline #CBD3D2;">Home</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+      </header>
+      <div class="content">
+        <h1>Chitkara University</h1>
+        <p>We, welcome you to this wonderland of dreams.</p>
+      </div>
+    </div>
+    <div class="body">
+      
+    <div class="main">
+      <div class="top">
+        <span class="set">
+          <h1>College Admissions Form</h1>
+          <p>Enter your information below</p>
+        </span>
+      </div>
+      <hr />
+        <label class="name" for="name">
+          <p><b>Personal Details</b></p>
+          <div>
+            <span>First Name</span>
+            <input type="text" placeholder="First Name" />
+            <span>Last name</span>
+            <input type="text" placeholder="Last Name" />
+          </div>
+          <div>
+            <span>Aadhaar Card No.</span>
+            <input type="number" placeholder="xxxx xxxx xxxx" />
+          </div>
+          <div>
+            <span>Sex</span>
+            <select id="option">
+              <option value=null>Select</option>
+              <option value="m">Male</option>
+              <option value="f">Female</option>
+              <option value="o">Others</option>
+            </select>
+            <span>Date of birth</span>
+            <input style="color: grey;" type="date">
+          </div>
+          <div>
+            <span>Age</span>
+            <input type="number" placeholder="Your age">
+            <span>Blood Group</span>
+            <input type="text" placeholder="Blood Group">
+          </div>
+          <p><b>Contact Details</b></p>
+          <div>
+            <span>Email</span>
+            <input type="email" placeholder="example@gmail.com" />
+            <span>Contact No.</span>
+            <input type="tel" placeholder="xxxxxxxxxx" />
+          </div>
+          <div>
+            <span>Alternative Contact No.</span>
+            <input type="tel" placeholder="xxxxxxxxxx" />
+          </div>
+          <p><b>Resident</b></p>
+          <div>
+            <span>Permanent Address</span>
+            <input class="Address" type="text" placeholder="Permanent Address">
+            <span>State</span>
+            <input type="text" placeholder="State">
+          </div>
+          <div>
+            <span>City</span>
+            <input type="text" placeholder="City">
+            <span>Pin Code</span>
+            <input type="text" placeholder="Pin Code">
+          </div>
+          <div>
+            <span>Alternative Address</span>
+            <input class="Address" type="text" placeholder="Alternative test Address">  
+          </div>
+          <p><b>Programs</b></p>
+          <div>
+            <span>Engineering</span>
+            <div class="radio-group">
+                <label><input style="width: auto; margin:15px 15px;" type="radio" name="engineering">CSE</label>
+                <label><input  style="width: auto; margin:15px 15px;" style="width: auto;" type="radio" name="engineering">CSE in AI</label>
+               <label><input style="width: auto; margin:15px 15px;" type="radio" name="engineering">Mechanical</label>
+               <label><input style="width: auto; margin:15px 15px;" type="radio" name="engineering">Mechatronics</label>
+               <label><input style="width: auto; margin:15px 15px;" type="radio" name="engineering">Electrical</label>
+               <div>
+                <label><input style="width: auto; margin:15px 15px;" type="radio" name="engineering">Electronics & Communication</label>
+               </div>
+            </div>
+          </div>
+          <p><b>Information of Parents</b></p>
+          <div>
+            <span>Father's Name</span>
+            <input type="text" placeholder="Father's name">
+            <span>Phone No.</span>
+            <input type="tel" placeholder="xxxxxxxxxx">
+          </div>
+          <div>
+            <span>Occupation</span>
+            <input type="text" placeholder="Occupation">
+            <span>Email</span>
+            <input type="email" placeholder="example@gmail.com">
+          </div>
+          <div>
+            <span>Mother's Name</span>
+            <input type="text" placeholder="Mother's name">
+          </div>
+        </label>
+        <div class="submit" >
+          <input type="submit">
+        </div>
+    </div>
+    </div> 
+      <footer>
+        <div class="foot">
+          <p>
+            By continuing past this page, you agree to our Terms of Service,Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Chitkara_university™ Ltd. All rights reserved.
+          </p>
+        </div>
+      </footer>
+  </body>
+</html>
