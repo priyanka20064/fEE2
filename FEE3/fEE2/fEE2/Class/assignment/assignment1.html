@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chalkpad Pro</title>
+    <link rel="icon" type="image/x-icon" href="download.png">
+    <style>
+        body {
+            background-image: url('chalkpad16.JPG'); 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial;
+            color: black;
+            border-top:6px solid #eb3838 ;
+            margin-top: 0%;
+            width: 100%;
+            margin-left: 0%;
+        }
+        
+        .container {
+            background-color: hsl(0, 0%, 100%);
+            width: 260px;
+            padding: 12px;
+            margin-left: 865px;
+            margin-top: 90px;
+            border: 1px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+           
+          ;
+        }
+        
+        label {
+            font-size: 15px;
+            display: block;
+            margin-bottom: 3.5px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 85%;
+            padding: 4px;
+            margin-bottom: 10px;
+            border: 1px solid hwb(197 5% 17%);
+        }
+        select {
+            width: 90%;
+            padding: 3.5px;
+            margin-bottom: 10px;
+            border: 1px solid hwb(197 5% 17%);
+        }
+        .text {
+            font-size: small;
+            font-family: Verdana;
+        }
+        
+        .a {
+            text-decoration: none;
+            color: black;
+            font-family: arial;
+        }
+        .center {
+            text-align: center;
+        }
+        .table {
+            margin-left: 60px;
+        }
+        .img {
+            position: absolute;
+            top: 0;
+            left: 1265px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+   
+    <div class="img"><a href="https://www.codebrigade.in/" target="_blank">
+        <img src="chalkpad15.png" ></a>
+    </div>
+    <div class="container">
+        <center>
+            <img src="chalkpad.JPG" alt="Chitkara University">
+        </center>
+        <form>
+            <label for="Username">Username</label>
+            <input type="text" id="Name">
+
+            <label for="Password">Password</label>
+            <input type="password" id="password">
+
+            <label for="Session">Session</label>
+            <select name="Session" id="Session">
+                <option value="---Select---">---select---</option>
+                <option value="Jul-Dec2022">Jul-Dec2022</option>
+                <option value="JanJun2023">Jan-Jun2023</option>
+                <option value="Jul-Dec2023">Jul-Dec2023</option>
+                <option value="JanJun2024">Jan-Jun2024</option>
+                <option value="Jul-Dec2024" selected>Jul-Dec2024</option>
+                <option value="2025-26">2025-26</option>
+                <option value="2026-27">2026-27</option>
+                <option value="2027-28">2027-28</option>
+                <option value="2028-29">2028-29</option>
+            </select>
+
+            <div class="text">
+                <input type="checkbox">Remember Password
+            </div><br>
+        </form>
+        
+        <table width="85%" height="20px" cellpadding="8.5" style="background-color: #D22B2B">
+            <tr>
+                <td><b style="font-size: 18px; color: aliceblue; text-align: center; font-family: sans-serif;">
+                    <center>Sign in</center>
+                </b></td>
+            </tr>
+        </table>
+
+        <div class="text">
+            <a href="" class="a">Forgot your password? Click here</a><br><br>
+            <a href="https://www.codebrigade.in/privacy-policy.php">Privacy Policy</a>
+        </div>
+        <div class="table">
+            <table width="65%">
+                <tr>
+                    <td>
+                        <a href="https://apps.apple.com/in/app/chalkpad-pro/id6443601604">
+                            <img src="chalk2.JPG" alt="App Store">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://play.google.com/store/apps/details?id=codebrigade.chalkpadpro.app&hl=en_IN&gl=US">
+                            <img src="chalkpad2.JPG" alt="Google Play">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="center">
+            <b>Mobile App Code: 800002</b><br>
+        </div><br>
+        <img src="chalkpad3.JPG">
+    </div>
+</body>
+</html>
