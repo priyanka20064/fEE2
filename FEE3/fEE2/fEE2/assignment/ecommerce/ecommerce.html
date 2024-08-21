@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monalisa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-position: center ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            height: 650px;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 650px;
+            background-color: hsla(180, 63%, 23%, 0.502); 
+            z-index: 1;
+        }
+
+        body > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        header p {
+            font-family: 'Times New Roman', Times, serif;
+            padding-left: 50px;
+            padding-top: 10px;
+            color: white;
+            font-size: 30px;
+        }
+        
+        header p:hover {
+            font-size: 30px;
+            color: black;
+            text-decoration: underline;
+        }
+        
+        header ul {
+            list-style: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header ul li {
+            font-family: monospace;
+            display: inline-block;
+            color: white;
+            padding: 15px 20px;
+            font-size: 20px;
+            font-weight: 400;
+            position: relative;
+        }
+        
+        header ul li:hover {
+            color: red;
+            text-decoration: none;
+        }
+
+    
+        header ul li .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 800px;
+            text-align: left;
+        }
+
+        header ul li:hover .dropdown,
+        header ul li .dropdown:hover {
+            display: block;
+            visibility: visible;
+            
+        }
+
+        header ul li .dropdown .category {
+            width: 23%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        header ul li .dropdown .category h3 {
+            color: #aa0066;
+            font-size: 18px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        header ul li .dropdown .category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        header ul li .dropdown .category ul li {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        header ul li .dropdown .category ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        header ul li .dropdown .category ul li a:hover {
+            color: #aa0066;
+            text-decoration: underline;
+            display: block;
+            visibility: visible;
+        }
+
+        main {
+            font-size: 90px;
+            color: white;
+            padding-left: 50px;
+           
+        }
+        
+        main p {
+            font-size: 20px;
+            color: white;
+            padding-left: 10px;
+            padding-bottom: 0px;
+        }
+        
+        main button {
+            height: 50px;
+            width: 200px;
+            color: white;
+            background-color: blue;  
+            border-color: black;  
+            margin-left: 30px;
+            margin-top: 0px;
+            font-size: 25px;
+            transition: height 0.3s, width 0.3s; 
+        }
+        
+        main button:hover {
+            width: 220px;
+            height: 60px;
+        }
+        
+        .span {
+            display: inline-block;
+            margin-left: 30px;
+            margin-top:0px;
+        }
+        
+        .span button {
+            height: 50px;
+            width: 200px;
+            color: white;
+            background-color: transparent; 
+            border: 1px solid black;
+            font-size: 25px;
+            transition: height 0.3s, width 0.3s;
+        }
+        
+        .span button:hover {
+            width: 220px;
+            height: 60px;
+        }
+     
+section{
+    background-image: url('image.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+table{
+    border:#ddd;
+    border-collapse:collapse;
+    margin-left: 80px;
+    margin-top: 89px;
+
+}
+table img {
+            transition: transform 0.3s ease; 
+           
+        }
+
+        table img:hover {
+            transform: scale(1.1); 
+            cursor: url('https://dt-monaliza.myshopify.com/cdn/shop/t/5/assets/eye.gif');
+        }
+
+
+h1{
+    font-size: 45px;
+    margin-left: 140px;
+    font-family: sans-serif;
+    font-weight: normal;
+    color: rgb(41, 40, 40);
+    
+}
+       
+
+.container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .title {
+            writing-mode:vertical-lr;
+            text-orientation: mixed;
+            font-size: 60px;
+            font-weight: normal;
+            
+        }
+
+        .card {
+            position: relative;
+            width: 28%;
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            background-color: #f5f5f5;
+        }
+
+        .card-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card-subtitle {
+            font-size: 16px;
+            color: #666;
+        }
+
+       
+        .impressionism .card-content {
+            background-color: #9C27B0;
+            color: white;
+        }
+
+        .expressionism .card-content {
+            background-color: #F44336;
+            color: white;
+        }
+
+        .abstract .card-content {
+            background-color: #0097A7;
+            color: white;
+        }
+
+        .foot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#CBD3D2;
+    font-size: small;
+    padding: 8px;}
+
+
+    @media only screen and (max-width: 1200px) {
+    header ul li .dropdown {
+        width: 100%; /* Adjust dropdown width for medium screens */
+    }
+
+    main {
+        font-size: 70px;
+    }
+
+    main button,
+    .span button {
+        width: 180px;
+        height: 45px;
+        font-size: 20px;
+    }
+    
+    table img {
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 35px;
+        margin-left: 80px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header p {
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    header ul li {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    main {
+        font-size: 50px;
+        padding-left: 20px;
+    }
+
+    main p {
+        font-size: 16px;
+        padding-left: 10px;
+    }
+
+    main button,
+    .span button {
+        width: 150px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-left: 50px;
+    }
+    
+    table {
+        margin-left: 20px;
+    }
+    
+    table img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header p {
+        font-size: 18px;
+        padding-left: 10px;
+    }
+
+    header ul li {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    main {
+        font-size: 40px;
+        padding-left: 10px;
+    }
+
+    main p {
+        font-size: 14px;
+        padding-left: 10px;
+    }
+
+    main button,
+    .span button {
+        width: 130px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-left: 20px;
+    }
+    
+    table img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <p>Monalisa - the art gallery</p>
+        <center>
+            <ul>
+                <li style="color: red;">Home</li>
+                <li>Product</li>
+                <li>
+                    Shop
+                    <div class="dropdown">
+                        <div class="category">
+                            <h3>History Painting</h3>
+                            <ul>
+                                <li><a href="#">Art Magic</a></li>
+                                <li><a href="#">Creative Art</a></li>
+                                <li><a href="#">ImageThink</a></li>
+                                <li><a href="#">Multicolor Art</a></li>
+                                <li><a href="#">Spiritual Art</a></li>
+                            </ul>
+                        </div>
+                        <div class="category">
+                            <h3>Religious Painting</h3>
+                            <ul>
+                                <li><a href="#">Brilliant Art</a></li>
+                                <li><a href="#">Dragon Art</a></li>
+                                <li><a href="#">Nature Art</a></li>
+                                <li><a href="#">The Face of Art</a></li>
+                                <li><a href="#">Cubism Art</a></li>
+                            </ul>
+                        </div>
+                        <div class="category">
+                            <h3>Genre Painting</h3>
+                            <ul>
+                                <li><a href="#">Canvas Art</a></li>
+                                <li><a href="#">Fantasy Art</a></li>
+                                <li><a href="#">Impressionism Art</a></li>
+                                <li><a href="#">Oil Painting</a></li>
+                                <li><a href="#">Pop Art</a></li>
+                            </ul>
+                        </div>
+                        <div class="category">
+                            <h3>Landscape Painting</h3>
+                            <ul>
+                                <li><a href="#">Contemporary Art</a></li>
+                                <li><a href="#">Fine Art Spot</a></li>
+                                <li><a href="#">Modern Art</a></li>
+                                <li><a href="#">Portrait Art</a></li>
+                                <li><a href="#">Henri Matisse Art</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>Contacts</li>
+            </ul>
+        </center>
+    </header>
+    <main>
+        Discover a new<br>
+        Kind of art
+     
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor asperiores<br>
+        eligendi mollitia omnis consequatur non, labore nam ratione dolo iusto<br>
+        odit autem recusandae debitis commodi. doloremque iusto magnam veritatis!
+        </p>
+        <button>Buy now</button>
+        <span class="span">
+            <button>Explore</button>
+        </span>
+    </main>
+   
+<section>
+    <table cellpadding="80px">
+        <tr>
+            <td style="cursor: url('https://dt-monaliza.myshopify.com/cdn/shop/t/5/assets/eye.gif'), auto;" valign="top">
+                <img src="ecommerce.JPG"  height="300px" width="300px" class="custom-cursor">
+                <h2 style="color:hsl(0, 0%, 35%); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    Explore Art</h2>
+                    <h2 style="color:black; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    The modern art gallery
+                </h2>
+            </td>
+            <td>
+                <img src="https://dt-monaliza.myshopify.com/cdn/shop/files/grid02_ec44ff22-74ff-403d-9ae0-f13f2413d84a.jpg?v=1658894601" width="600px" height="500px">
+                <h2 style="color:hsl(0, 0%, 46%); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center;">
+                    Beatiful Art
+</h2>
+                    <h2 style="color:black; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center;">
+                        Famous artist paintings
+                </h2>
+            </td>
+        </tr>
+    </table>
+
+
+    <table cellpadding="50px">
+        <tr>
+            <td valign="top">
+                <img src="https://dt-monaliza.myshopify.com/cdn/shop/files/grid03_031ab2db-9576-4660-b395-16aae2b0d385.jpg?v=1658894625"  height="350px" width="600px" class="custom-cursor">
+                <h2 style="color:hsl(0, 0%, 35%); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    Imaginative
+</h2>
+                    <h2 style="color:black; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                        Original artworks & paintings
+                </h2>
+            </td>
+            <td>
+                <img src="https://dt-monaliza.myshopify.com/cdn/shop/files/grid06.jpg?v=1658894661" width="350px" height="550px">
+                <h2 style="color:hsl(0, 0%, 46%); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center;">
+                    Special Art
+
+</h2>
+                    <h2 style="color:black; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center;">
+                        Personalized oil paintings
+                </h2>
+            </td>
+        </tr>
+    </table>
+     
+
+
+     <table cellpadding="50px">
+                    <tr>
+                        <td valign="top">
+                            <img src="https://dt-monaliza.myshopify.com/cdn/shop/files/grid05_9c76563b-22d5-4f80-bbd1-1aa9ed68b7b6.jpg?v=1658894831" height="400px" width="350px" class="custom-cursor">
+        
+                        </td>
+                        <td>
+                            <img src="https://dt-monaliza.myshopify.com/cdn/shop/files/grid04.jpg?v=1658894699" width="650px" height="400px">
+                            <h2 style="color:hsl(0, 0%, 46%); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: left;">
+                                Unique Designs
+            
+            </h2>
+                                <h2 style="color:black; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: left;">
+                                    Perfect abstract paintings
+                            </h2>
+                        </td>
+                    </tr>
+                </table>
+
+
+                <h1>
+                    A &nbsp;true &nbsp; artist &nbsp; is&nbsp; not &nbsp;one&nbsp; who&nbsp; is&nbsp;<br> inspired,&nbsp; but&nbsp; one&nbsp; who&nbsp; inspires<br> to&nbsp; motivate  &nbsp;others.
+                  
+                </h1>
+                <a href="" style="margin-left: 140px;">Shop now -></a>
+                <br>
+                <br>
+                <br>
+
+
+                <div class="container">
+                    <div class="title">
+                        Modern Paintings
+                    </div>
+                    <div class="card impressionism">
+                        <img src="https://dt-monaliza.myshopify.com/cdn/shop/files/blog01.jpg?v=1658894859" alt="Impressionism Art">
+                        <div class="card-content">
+                            <div class="card-title">Impressionism Art</div>
+                            <div class="card-subtitle">By George</div>
+                        </div>
+                    </div>
+                    <div class="card expressionism">
+                        <img src="https://dt-monaliza.myshopify.com/cdn/shop/files/blog02.jpg?v=1658894883" alt="Expressionism Art">
+                        <div class="card-content">
+                            <div class="card-title">Expressionism Art</div>
+                            <div class="card-subtitle">By Antony</div>
+                        </div>
+                    </div>
+                    <div class="card abstract">
+                        <img src="https://dt-monaliza.myshopify.com/cdn/shop/files/blog03.jpg?v=1658894897" alt="Abstract Art">
+                        <div class="card-content">
+                            <div class="card-title">Abstract Art</div>
+                            <div class="card-subtitle">By Lisha</div>
+                        </div>
+                    </div>
+                </div>
+<br><br><br>
+
+
+                <h1 style="color: #000000; font-family: 'Franklin Gothic Medium; font-weight:normal">
+                    Sign Up For Latest News
+                </h1>
+                <form action="">
+                    <div class="mb-3" style="margin-left:90px; margin: right 90px;">
+                        <label class="form-label" for="email">Email Address</label>
+                        <input class="form-control" type="text" placeholder="Email" id="email">
+                    </div> </form>
+                  
+                    <img src="https://dt-monaliza.myshopify.com/cdn/shop/t/5/assets/scrolltop.gif" height="50px" width="50px" style="margin-left:1270px;
+                    ">
+                    <div class="foot">
+                        <p>
+                          By continuing past this page, you agree to our Terms of Service,Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Monalisa™ Ltd. All rights reserved.
+                        </p>
+                      </div>
+                </section>
+               
+                     
+    </body>
+    </html>
