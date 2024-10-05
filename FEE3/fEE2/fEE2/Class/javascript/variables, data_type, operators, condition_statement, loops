@@ -1,4 +1,3 @@
-
 //boilerplate code= the code that vs code enerate for us
 //javascript is a dynamically typed language wo dont have to mention data type before we use a varible
 // var: redeclaration and assignment possible
@@ -26,7 +25,7 @@
 //full_name snake case
 // Full_Name Pascal case
 
-
+console.log(typeof typeof 1)
 //datatypes
 // 1. number:
 // let a = 10;
@@ -99,19 +98,21 @@
 // // z = z + 5
 // z %= 5
 // console.log(z)
+
+
 // // 3.comparison operator:
-// let a = 10;
-// let b = '10';
-// let c = 20;
-// console.log(a == b); // 10 == 20 
-// console.log(a === b); // 10(num) === 10(string)
-// console.log(a != b);
-// console.log(a !== b);
-// console.log(a > c);
-// console.log(a < c);
-// console.log(a >= b);
-// console.log(a <= b);
-// // console.log(a =< b);
+let a = 10;
+let b = '10';
+let c = 20;
+console.log(a == b); // 10 == 10 // ==its checks for number
+console.log(a === b); // 10(num) === 10(string) //===it checks for datatypes
+console.log(a != b);
+console.log(a !== b);
+console.log(a > c);
+console.log(a < c);
+console.log(a >= b);
+console.log(a <= b);
+// console.log(a =< b);
 // // logical operators:
 // let i = true;
 // let j = false;
@@ -165,4 +166,39 @@
 //     console.log(i);
 //     i++;
 // }while(i < 5);
+
+//for (let val of strVar){
+//} we have two more loop for-of and for-in which help in 
+// 1. for-of: Iterate over an array
+// let arr = [1, 2, 3, 4, 5];
+// for (let val of arr) {
+//     console.log(val);
+// }
+// 2. for-in: Iterate over an object
+// let obj = {a: 1, b: 2, c: 3};
+// for (let key in obj) {  //key 
+//     console.log(key + " = " + obj[key]);
+// }
+// 3. for-in: Iterate over an array
+// let arr = [1, 2, 3, 4, 5];
+// for (let key in arr) {
+//     console.log(key + " = " + arr[key]);
+// }
+
+
+//for-of (for string and array )
+
+let str='priyanka';
+for (let i of str){
+    console.log("i=",i);
+}
+let str1="priyankach";
+let size=0;
+for (let i of str1){
+    console.log("i=",i);
+    size++;
+}
+console.log("string size is ",size);
+
+
 
